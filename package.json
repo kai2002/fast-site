@@ -1,0 +1,43 @@
+{
+  "name": "fast-product-site",
+  "version": "1.0.0",
+  "description": "High-tech Apple-style official product site for FAST Agent Engine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@heroui/button": "^2.2.32",
+    "@heroui/card": "^2.2.28",
+    "@heroui/chip": "^2.2.25",
+    "@heroui/progress": "^2.2.25",
+    "@heroui/react": "^3.2.4",
+    "@types/canvas-confetti": "^1.9.0",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.1.0",
+    "lucide-react": "^1.33.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@heroui/theme": "^2.4.26",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^7.0.2",
+    "vite": "^5.4.14"
+  }
+}
