@@ -16,31 +16,35 @@
   body {
     background-color: #000000;
     color: #f5f5f7;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: -0.01em;
   }
 }
 
-/* Apple-style gradient texts */
+/* Apple-style gradient texts with high contrast fallback */
 .text-gradient-hero {
-  background: linear-gradient(180deg, #FFFFFF 0%, #A1A1A6 100%);
+  color: #ffffff;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D1D1D6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-blue {
+  color: #2997ff;
   background: linear-gradient(135deg, #2997FF 0%, #90C6FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
+  color: #ff9f0a;
   background: linear-gradient(135deg, #FF6B00 0%, #FFAE00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-purple {
+  color: #bf5af2;
   background: linear-gradient(135deg, #BF5AF2 0%, #5E5CE6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,25 +52,25 @@
 
 /* Glassmorphism & Apple Card styles */
 .apple-card {
-  background: rgba(22, 22, 24, 0.6);
+  background: rgba(22, 22, 24, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .apple-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
   box-shadow: 0 30px 60px -15px rgba(0, 113, 227, 0.15);
 }
 
 .glass-nav {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Custom scrollbar */
@@ -78,9 +82,21 @@
   background: #000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #3f3f46;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #52525b;
+}
+
+/* prefers-reduced-motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
