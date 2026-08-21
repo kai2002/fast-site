@@ -1,39 +1,39 @@
 import React, { useState } from 'react';
-import { Check, Minus, Sparkles } from 'lucide-react';
+import { Check, Minus, Sparkles, ShieldCheck, Brain, Cpu, Layers } from 'lucide-react';
 
 export const PerformanceMatrix: React.FC = () => {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
 
   const comparison = [
     {
-      feature: '运行核心架构',
-      fast: 'Actor 模型三级分片 (Run / Session / Meta)',
-      traditional: '单一进程循环 / 无序回调',
+      feature: '智能体业务模态',
+      fast: '双模融通 (Coding 源码级工程 + Work 企业业务协同)',
+      traditional: '单一代码补全 或 纯文本对话助理，无法兼顾工程与业务',
     },
     {
-      feature: '交付可验证性 (Goal DAG)',
-      fast: '内置 Executor-Verifier-Summarizer 刚性闭环',
-      traditional: '仅依赖 Prompt 自我审查',
+      feature: '协同与交付机制',
+      fast: '虚拟团队 (Executor-Verifier-Summarizer) + Goal DAG 刚性质检',
+      traditional: '单智能体单打独斗 / 无验收标准，依靠 Prompt 猜测与幻觉重试',
     },
     {
-      feature: '状态持久化与审计',
-      fast: '不可篡改 Run Ledger & 多级压缩',
-      traditional: '简单内存或文本追加',
+      feature: '模型运行时架构',
+      fast: 'L0 SPI 开放解耦 (自研/DeepSeek/π/Codex/Claude/私有化)',
+      traditional: '强绑定特定商业闭源 API / 无法热插拔与私有化替换',
     },
     {
-      feature: '协议与双端体验',
-      fast: '统一 NDJSON 驱动 TUI / Desktop 纯同构',
-      traditional: '终端与桌面功能割裂',
+      feature: '底层分布式拓扑',
+      fast: '原生分布式 Agent 分片集群 (Run / Session / Meta)',
+      traditional: '单机进程循环 / 单点崩溃导致上下文与事务全部丢失',
     },
     {
-      feature: '扩展模型',
-      fast: 'L0 SPI 开放架构 (支持 DSH / 异构引擎)',
-      traditional: '强绑定特定供应商 API',
+      feature: '记忆与知识底座',
+      fast: '自研三层 Memory 终身学习 + 业务本体论 (Ontology) 数字孪生',
+      traditional: '简单向量 RAG 检索 / 每次启动皆为白纸，缺乏概念与规程沉淀',
     },
     {
-      feature: '冷启动与常驻开销',
-      fast: '< 100ms 启动 / ~40MB 基础常驻',
-      traditional: '重度依赖 Node 环境 / 300MB+',
+      feature: '开源与接入形态',
+      fast: 'Apache-2.0 开源 + TUI / GUI / 企业 SDK 全阶支持',
+      traditional: '黑盒 SaaS 封装 / 无法内嵌企业内部 DevSecOps 流水线',
     },
   ];
 
@@ -41,13 +41,13 @@ export const PerformanceMatrix: React.FC = () => {
     <section id="matrix" className="py-20 px-6 max-w-7xl mx-auto" aria-labelledby="matrix-heading">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 id="matrix-heading" className="text-xs uppercase tracking-wider text-indigo-400 font-mono mb-3 font-semibold">
-          PERFORMANCE & BENCHMARKS
+          SYSTEM MATRIX & COMPARISON
         </h2>
-        <p className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6">
-          硬核系统指标对比
+        <p className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-5">
+          硬核系统全景对比
         </p>
-        <p className="text-[#A1A1A6] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          用工程系统的严苛标准审视 Agent 工具。FAST 为交付确定性与极致效能而生。
+        <p className="text-[#A1A1A6] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          用现代分布式工程系统的严苛标准，审视智能体操作系统。FAST 为工业级交付确定性而生。
         </p>
       </div>
 
@@ -57,20 +57,20 @@ export const PerformanceMatrix: React.FC = () => {
           <caption className="sr-only">FAST 引擎与传统 Agent 工具特性指标全景对比表</caption>
           <thead>
             <tr className="border-b border-neutral-800">
-              <th scope="col" className="py-4 px-6 text-xs uppercase font-mono text-[#A1A1A6]">能力维度</th>
+              <th scope="col" className="py-3.5 px-6 text-xs uppercase font-mono text-[#A1A1A6]">核心维度</th>
               <th
                 scope="col"
-                className="py-4 px-6 text-xs uppercase font-mono text-blue-400 font-semibold bg-blue-500/10 rounded-t-2xl border-t border-x border-blue-500/20"
+                className="py-3.5 px-6 text-xs uppercase font-mono text-blue-400 font-semibold bg-blue-500/10 rounded-t-2xl border-t border-x border-blue-500/20"
               >
                 <div className="flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>FAST Engine 2.0</span>
+                  <span>FAST Agent OS (Open Source)</span>
                 </div>
               </th>
-              <th scope="col" className="py-4 px-6 text-xs uppercase font-mono text-[#A1A1A6]">传统 Agent 工具</th>
+              <th scope="col" className="py-3.5 px-6 text-xs uppercase font-mono text-[#A1A1A6]">传统 Agent / AI 工具</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-neutral-900 text-sm">
+          <tbody className="divide-y divide-neutral-900 text-xs sm:text-sm">
             {comparison.map((item, idx) => {
               const isHovered = hoveredRow === idx;
               return (
@@ -117,7 +117,7 @@ export const PerformanceMatrix: React.FC = () => {
               <div className="p-3 rounded-xl bg-blue-950/20 border border-blue-500/30">
                 <div className="text-blue-400 font-mono font-semibold mb-1 flex items-center gap-1.5">
                   <Check className="w-3.5 h-3.5" aria-hidden="true" />
-                  <span>FAST Engine 2.0</span>
+                  <span>FAST Agent OS</span>
                 </div>
                 <div className="text-neutral-100 font-medium leading-relaxed pl-5">
                   {item.fast}

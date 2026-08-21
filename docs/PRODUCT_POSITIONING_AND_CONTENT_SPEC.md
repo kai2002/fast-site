@@ -9,16 +9,16 @@
 ## 一、产品全新战略定位与品牌愿景
 
 ### 1.1 一句话定位 (Core Statement)
-> **FAST 是开源、原生的分布式双模智能体操作系统（Agent OS），以多智能体协同与自研记忆系统，打造企业自主进化大脑。**
+> **FAST 是开源、原生的分布式双模（Coding + Work）智能体操作系统（Agent OS），以多智能体协同与自研记忆系统，打造企业自主进化大脑。**
 
-*(注：更简短的副标/Slogan 可选：`开源分布式双模 Agent OS，让多智能体协同构筑企业大脑。`)*
+*(注：更简短的副标/Slogan 可选：`开源分布式双模（Coding + Work）Agent OS，让多智能体协同构筑企业大脑。`)*
 
 ### 1.2 核心设计哲学与价值主张 (Core Values)
 1. **开源开放，生态共建 (Open Source & Community First)**：
    - 坚持 Apache-2.0 友好的开源协议，代码透明、架构解耦、协议开放，彻底拒绝商业黑盒与厂商绑架。
    - 繁荣的全球开发者社区，提供丰富的官方 SPI 插件、智能体技能库与企业落地模版。
-2. **双模融通 (Dual-Mode Intelligence)**：
-   - 打破传统工具“纯代码补全”或“纯对话助理”的狭隘边界，向下深潜源码工程，向上统摄企业业务交付与复杂工作流。
+2. **双模（Coding + Work）融通 (Dual-Mode Intelligence)**：
+   - 打破传统工具“纯代码补全”或“纯对话助理”的狭隘边界，向下深潜源码工程（Coding），向上统摄企业业务交付与复杂工作流（Work）。
 3. **多智能体协作与虚拟团队 (Multi-Agent Virtual Team & Goal DAG)**：
    - 告别单打独斗的 Prompt 交互，支持按需动态编排「分析师 + 架构师 + 质检员 + 总结者」等专属虚拟团队。
    - 以目标驱动交付（Goal-Driven Delivery），内置刚性验收、形式化验证与不可篡改交付账本。
@@ -28,8 +28,9 @@
    - 基于 RunShard / SessionShard / MetaShard 三级 Agent 分片拓扑，生于分布式，天生具备超大并发无锁隔离、水平弹性伸缩与毫秒级容灾自愈。
 6. **全阶接触点 (Multi-Tier Surface)**：
    - 极客终端 Fast-Ink TUI + 沉浸式 Desktop GUI + 企业级嵌入式 SDK / SPI，适配从独立工程师到大型平台研发的全场景。
-7. **企业级大脑底座 (Enterprise Brain & Memory System)**：
-   - 不可篡改 Run Ledger 审计流水 + 自研长程多级 Memory 系统 + 动态企业知识引擎，让组织资产可沉淀、可检索、自主进化。
+7. **企业级大脑底座 (Enterprise Brain & Ontology Engine)**：
+   - 不可篡改 Run Ledger 审计流水 + 自研长程多级 Memory 系统 + 基于**业务本体论 (Ontology)** 构建的企业知识引擎。
+   - 告别孤立冷冰的数据堆叠，通过统一本体建模将底层多源异构数据映射为现实业务概念（客户、资产、订单、设备等）及其动态因果关系，构建高精度企业数字孪生，赋能 AI 做出符合业务逻辑的高阶决策。
 
 ---
 
@@ -91,15 +92,21 @@
 - **Desktop GUI App**：面向架构师与研发负责人的沉浸式桌面工作台，集成多智能体拓扑监控、实时 Canvas、可视化 Diff 审查与审计账本。
 - **Enterprise SDK / SPI**：提供 TypeScript / Python / Go / Rust / Java 语言绑定，一行代码将 FAST 双模引擎嵌入企业内部 DevSecOps、CI/CD 与业务中台。
 
-### 支柱 6：自研 Memory 系统 + 知识引擎（赋能企业构建自主大脑）
-- **自研多级 Memory 记忆体系**：
-  - **Episodic Memory (事件记忆)**：全量 Run Ledger 不可篡改时间线，记录所有决策痕迹、调试步骤与反思笔记；
-  - **Semantic Memory (语义记忆)**：基于向量与知识图谱的长期经验沉淀，自动从日常研发中提炼可复用规范；
-  - **Procedural Memory (规程记忆)**：团队最佳实践、Goal DAG 模板与 SOP 自动进化。
-- **企业知识引擎 (Enterprise Knowledge Engine)**：
-  - 跨代码库、文档库、Jira/飞书/Confluence 的多源实时同步与拓扑图谱构建；
-  - 零幻觉上下文压缩与智能知识检索（RAG + GraphRAG + Compaction）；
-  - **企业大脑演进**：越使用、越懂业务；新员工与新团队秒级获取组织全量工程经验。
+### 支柱 6：自研多级 Memory 系统与自主学习进化（赋能企业构建自主大脑）
+- **自研多级 Memory 记忆与自主学习闭环**：
+  - **Episodic Memory (事件与行为记忆)**：全量 Run Ledger 不可篡改时间线，精准记录智能体每一次工具调用、调试轨迹、失败教训与反思复盘；
+  - **Semantic Memory (概念与语义记忆)**：自动从海量交互与代码重构中提炼领域概念与规范，完成从感知到认知的升维；
+  - **Procedural Memory (技能与规程记忆)**：沉淀经过实战检验的高效工作流、Goal DAG 拓扑模版与团队 SOP，形成智能体肌肉记忆；
+  - **自主反思与终身学习 (Autonomous Learning & Self-Evolution)**：
+    - **从“静态模型”到“活体智能”**：告别每次启动都是“白纸”的传统 LLM 工具。FAST 智能体在每次任务结束后自动触发**反思提炼（Reflection & Distillation）**；
+    - **自我纠错与技能泛化**：成功经验转化为可复用技能，失败教训转化为负向先验拦截，实现“越用越聪明、越用越懂业务”的闭环自主进化。
+- **基于本体论的企业知识引擎 (Ontology-driven Knowledge Engine)**：
+  - **从“数据存储”跃升为“业务概念”**：
+    - 单纯的原始数据（代码库、Git Commits、Jira 任务、MySQL 数据表）只是冷冰冰的散乱信息；
+    - 知识引擎通过构建**企业级业务本体 (Enterprise Ontology)**，将数据转化为现实世界的实体概念（如「客户」、「订单」、「微服务拓扑」、「金融资产」、「工厂设备」及其动态关联因果网）；
+  - **企业级数字孪生 (Enterprise Digital Twin)**：
+    - 结合 GraphRAG 与多源动态图谱，让 Agent 不仅理解代码语法，更深度理解背后的商业契约与系统架构；
+    - 支撑复杂推理与高可靠决策，帮助企业构建永不流失、持续进化的自主大脑。
 
 ---
 
@@ -118,14 +125,14 @@
 - **操作项**：`GitHub ⭐ (Apache-2.0)`、`curl -fsSL fast.ai/install`、`免费体验 / 获取企业版`
 
 ### 3.2 首屏 (Hero Section)
-- **微标 (Pill)**：`开源分布式双模 Agent OS • Apache-2.0 许可`
+- **微标 (Pill)**：`开源分布式双模（Coding + Work）Agent OS • Apache-2.0 许可`
 - **主标题**：
-  - `编程智能体 × Work 智能体。`
+  - `编程智能体 (Coding) × 业务智能体 (Work)。`
   - `多智能体协同，构筑企业自主大脑。`
 - **副标题**：
   - `开源、原生分布式 Agent 内核，纳管自研、DeepSeek、π、Codex、Claude 等全谱系引擎。支持虚拟团队动态协作、Goal DAG 可验证闭环，结合自研 Memory 与知识引擎，定义下一代工程级智能体系统。`
 - **四大核心指标 (2x2 Grid)**：
-  1. `Dual-Mode`：编程与工作流双模融通
+  1. `Dual-Mode`：Coding + Work 双模融通
   2. `Virtual Team`：多智能体协作与 Goal DAG 闭环
   3. `Agent Sharding`：原生分布式 Run / Session 分片集群
   4. `Enterprise Brain`：自研 Memory + 知识引擎持久进化
@@ -154,9 +161,11 @@
   3. `[分布式自愈] SessionShard 宕机注入与无损自愈 (@team/infra-chaos)`
   4. `[企业大脑] 知识引擎索引代码库与历史经验检索 (@team/brain-memory)`
 
-### 3.6 企业大脑与 Memory 系统 (Enterprise Brain Section)
-- **三层 Memory 记忆机制**：Episodic (事务流水) + Semantic (领域知识) + Procedural (流程 SOP)
-- **知识引擎**：全代码库 GraphRAG + 文档资产自动提炼，让组织经验永不流失。
+### 3.6 企业大脑：自研 Memory 自主进化与本体知识引擎 (Enterprise Brain)
+- **三层 Memory 自主进化闭环**：
+  - **Episodic (事件行为反思)** + **Semantic (概念提炼升维)** + **Procedural (SOP 技能内化)**；
+  - 具备**终身学习 (Lifelong Learning)** 机制，任务交付后自动提炼成功经验并沉淀失败教训，越用越聪明。
+- **本体论建模与数字孪生**：超越简单文档存储与向量检索，将企业异构多源数据结构化为**实体与因果关联网络**（客户/资产/设备/拓扑），构建高保真数字孪生，驱动高阶业务智能决策。
 
 ---
 

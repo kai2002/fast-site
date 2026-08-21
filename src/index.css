@@ -17,21 +17,37 @@
     background-color: #000000;
     color: #f5f5f7;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'tnum' 1, 'ss01' 1, 'cv01' 1;
+    overflow-x: hidden;
+  }
+
+  /* Dot matrix and blueprint background textures */
+  .bg-dot-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-blueprint-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }
 
-/* Apple-style gradient texts with high contrast fallback */
+/* Gradient typography styles */
 .text-gradient-hero {
   color: #ffffff;
-  background: linear-gradient(180deg, #FFFFFF 0%, #D1D1D6 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #E5E5EA 60%, #A1A1A6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-blue {
   color: #2997ff;
-  background: linear-gradient(135deg, #2997FF 0%, #90C6FF 100%);
+  background: linear-gradient(135deg, #2997FF 0%, #60A5FA 50%, #A5B4FC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -45,45 +61,59 @@
 
 .text-gradient-purple {
   color: #bf5af2;
-  background: linear-gradient(135deg, #BF5AF2 0%, #5E5CE6 100%);
+  background: linear-gradient(135deg, #BF5AF2 0%, #818CF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Glassmorphism & Apple Card styles */
 .apple-card {
-  background: rgba(22, 22, 24, 0.7);
+  background: rgba(18, 18, 20, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .apple-card:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.22);
   transform: translateY(-2px);
-  box-shadow: 0 30px 60px -15px rgba(0, 113, 227, 0.15);
+  box-shadow: 0 30px 60px -15px rgba(0, 113, 227, 0.18);
 }
 
 .glass-nav {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.82);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pulse glow for primary CTA */
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.18), 0 0 40px 6px rgba(41, 151, 255, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 25px 4px rgba(255, 255, 255, 0.3), 0 0 50px 10px rgba(41, 151, 255, 0.35);
+  }
+}
+
+.btn-primary-glow {
+  animation: cta-pulse 4s infinite ease-in-out;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #000;
 }
 ::-webkit-scrollbar-thumb {
   background: #3f3f46;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #52525b;
